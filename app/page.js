@@ -1,6 +1,7 @@
 'use client'
 
 import dynamic from "next/dynamic";
+// import Team from "./_components/Team";
 import Hero from "./_components/Hero"
 
 const OurServices = dynamic(() =>
@@ -18,6 +19,8 @@ const Home = () => {
       <Hero />
       <OurServices />
       <WhatWeDo />
+
+      {/* <Team /> */}
       <div className="h-screen"></div>
       <div className="h-screen"></div>
     </>

@@ -91,7 +91,7 @@ const OurServices = () => {
         {/* Main content area */}
         <main className="flex items-center relative">
           {/* Service text */}
-          <h2 className="text-[3rem] font-medium leading-normal text-foreground text-shadow-2xs drop-shadow-2xl transition-opacity duration-500 mr-[24vw]">
+          <h2 className="text-[3rem] font-medium leading-normal text-foreground transition-opacity duration-500 mr-[24vw]">
             <TextAnimate
               key={activeService}
               delay={0.2}
