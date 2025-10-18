@@ -1,6 +1,16 @@
+'use client'
+
+import dynamic from "next/dynamic";
 import Hero from "./_components/Hero"
-import OurServices from "./_components/OurServices"
-import WhatWeDo from "./_components/WhatWeDo"
+
+const OurServices = dynamic(() =>
+  import("./_components/OurServices").then(),
+  { ssr: false }
+);
+const WhatWeDo = dynamic(() =>
+  import("./_components/WhatWeDo").then(),
+  { ssr: false }
+);
 
 const Home = () => {
   return (

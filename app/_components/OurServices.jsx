@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import React, { useRef, useState } from "react";
 import {
   motion,
@@ -8,9 +9,17 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import Image from "next/image";
-import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import Link from "next/link";
-import { TextAnimate } from "@/components/ui/text-animate";
+
+const AnimatedShinyText = dynamic(
+  () => import("@/components/ui/animated-shiny-text").then(),
+  { ssr: false }
+);
+
+const TextAnimate = dynamic(
+  () => import("@/components/ui/text-animate").then((mod) => mod.TextAnimate),
+  { ssr: false }
+);
 
 const services = [
   {
@@ -96,7 +105,7 @@ const OurServices = () => {
           </h2>
 
           {/* Football — independent continuous scroll animation */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[58%]">
+          <div className="absolute z-20 right-0 top-1/2 -translate-y-1/2 translate-x-[58%]">
             <motion.div className="relative px-4 w-[35vw]" style={{ rotate }}>
               <div className="w-full h-auto bg-background rounded-full">
                 <Image

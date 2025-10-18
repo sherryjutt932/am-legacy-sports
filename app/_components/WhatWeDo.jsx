@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import React, { useRef } from "react";
 import Spacer from "./ui/Spacer";
 import Image from "next/image";
@@ -9,7 +10,10 @@ import {
   useTransform,
   useMotionValueEvent,
 } from "framer-motion";
-import { TextAnimate } from "@/components/ui/text-animate";
+const TextAnimate = dynamic(
+  () => import("@/components/ui/text-animate").then((mod) => mod.TextAnimate),
+  { ssr: false }
+);
 
 const list = [
   {

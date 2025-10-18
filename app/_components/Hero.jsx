@@ -1,11 +1,20 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ImageEffect from "./ImageEffect";
 import { demo1Config } from "./ImageEffect/demo1";
-import { TextAnimate } from "@/components/ui/text-animate";
-import { BlurFade } from "@/components/ui/blur-fade";
+
+const TextAnimate = dynamic(
+  () => import("@/components/ui/text-animate").then((mod) => mod.TextAnimate),
+  { ssr: false }
+);
+
+const BlurFade = dynamic(
+  () => import("@/components/ui/blur-fade").then((mod) => mod.BlurFade),
+  { ssr: false }
+);
 
 const Hero = () => {
   return (

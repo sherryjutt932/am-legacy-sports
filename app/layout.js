@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${poppins.variable} antialiased`}>
         <LenisSmooth />
-        <div className="fixed pointer-events-none z-[10000] flex h-screen w-full flex-col items-center justify-center overflow-hidden">
+        <div className="fixed pointer-events-none z-10 flex h-screen w-full flex-col items-center justify-center overflow-hidden">
           <DotPattern
             glow={true}
           />

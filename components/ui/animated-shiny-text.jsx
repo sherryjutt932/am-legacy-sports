@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-export const AnimatedShinyText = ({
+const AnimatedShinyText = ({
   children,
   className,
   shimmerWidth = 100,
@@ -26,3 +26,5 @@ export const AnimatedShinyText = ({
     </span>
   );
 };
+
+export default AnimatedShinyText;
