@@ -95,7 +95,7 @@ const OurServices = () => {
             <TextAnimate
               key={activeService}
               delay={0.2}
-              duration={1}
+              duration={0.5}
               animation="blurInUp"
               once={false}
               by="word"

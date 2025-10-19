@@ -1,7 +1,8 @@
 'use client'
 
 import dynamic from "next/dynamic";
-// import Team from "./_components/Team";
+import Team from "./_components/Team";
+import Stats from "./_components/Stats";
 import Hero from "./_components/Hero"
 
 const OurServices = dynamic(() =>
@@ -19,8 +20,8 @@ const Home = () => {
       <Hero />
       <OurServices />
       <WhatWeDo />
-
-      {/* <Team /> */}
+      <Stats />
+      <Team />
       <div className="h-screen"></div>
       <div className="h-screen"></div>
     </>

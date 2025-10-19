@@ -4,17 +4,22 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
-const Spacer = ({ className, children, ...props }) => {
+const Spacer = ({ className, children, fullWidth = false, ...props }) => {
   return (
     <motion.div
-      initial={{ width: "2rem", opacity: 0 }}
-      whileInView={{ width: "20rem", opacity: 1 }}
+      initial={fullWidth ? { opacity: 0 } : { width: "2rem", opacity: 0 }}
+      whileInView={fullWidth ? { opacity: 1 } : { width: "20rem", opacity: 1 }}
       transition={{
         delay: 0.2,
-        duration: 2.4, // 🕰 slower, cinematic pace
-        ease: [0.16, 1, 0.3, 1], // 🪶 soft "ease-out" curve
+        duration: fullWidth ? 1.2 : 2.4, // shorter fade if fullWidth
+        ease: [0.16, 1, 0.3, 1],
       }}
-      className={cn("shrink flex items-center gap-0", className)}
+      viewport={{ once: true }}
+      className={cn(
+        "flex items-center gap-0 shrink",
+        fullWidth ? "w-full" : "",
+        className
+      )}
       {...props}
     >
       <motion.div

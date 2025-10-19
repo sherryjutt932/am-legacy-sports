@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 // import { demo1Config } from "./ImageEffect/demo1";
 
 // const ImageEffect = dynamic(() => import("./ImageEffect").then(), {
