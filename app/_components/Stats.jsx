@@ -51,7 +51,7 @@ const Stats = () => {
         <div className="flex flex-col w-full" key={i}>
           <div className="flex-1 flex gap-9 px-10 py-8 items-center">
             <div className="min-w-[2.5ch] text-right text-[3rem] font-medium text-foreground">
-              <TextAnimate animation="blurIn" by="character">
+              <TextAnimate once animation="blurIn" by="character">
                 {stat.value}
               </TextAnimate>
             </div>

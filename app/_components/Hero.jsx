@@ -3,12 +3,12 @@
 import dynamic from "next/dynamic";
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
-// import { demo1Config } from "./ImageEffect/demo1";
+// import Image from "next/image";
+import { demo1Config } from "./ImageEffect/demo1";
 
-// const ImageEffect = dynamic(() => import("./ImageEffect").then(), {
-//   ssr: false,
-// });
+const ImageEffect = dynamic(() => import("./ImageEffect").then(), {
+  ssr: false,
+});
 
 const TextAnimate = dynamic(
   () => import("@/components/ui/text-animate").then((mod) => mod.TextAnimate),
@@ -28,10 +28,10 @@ const Hero = () => {
         className="origin-[22%_100%] absolute inset-0 -z-20 pointer-events-none"
         style={{
           y: useTransform(useScroll().scrollY, [0, 800], [0, 200]),
-          scale: useTransform(useScroll().scrollY, [0, 800], [1, 1.6]),
+          //   scale: useTransform(useScroll().scrollY, [0, 800], [1, 1.6]),
         }}
       >
-        {/* <ImageEffect
+        <ImageEffect
           config={{
             images: ["/HeroBg.png", "/Hero.webp"],
             loop: false,
@@ -44,14 +44,14 @@ const Hero = () => {
             debug: demo1Config.debug,
             uniforms: demo1Config.uniforms,
           }}
-        /> */}
-        <Image
+        />
+        {/* <Image
           src="/Hero.webp"
           alt="AM Legacy Sports Logo"
           fill
           className="absolute inset-0 object-cover -z-20"
           priority
-        />
+        /> */}
       </motion.div>
       <div className="absolute left-0 top-0 w-full h-[45%] bg-gradient-to-b from-background to-transparent -z-10"></div>
       <div className="absolute left-0 bottom-0 w-full h-[35%] bg-gradient-to-t from-background to-transparent -z-10"></div>
