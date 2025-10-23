@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import LenisSmooth from "@/components/LenisSmooth";
 import { DotPattern } from "@/components/ui/dot-pattern";
+import Footer from "./_components/Footer";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -17,6 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" as="image" href="/Hero.webp" />
+      </head>
       <body className={`${poppins.variable} antialiased`}>
         <LenisSmooth />
         <div className="fixed pointer-events-none -z-10 flex h-screen w-full flex-col items-center justify-center overflow-hidden">
@@ -25,8 +29,10 @@ export default function RootLayout({ children }) {
           />
         </div>
         {/* <Navbar /> */}
-        {children}
-        {/* <Footer /> */}
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

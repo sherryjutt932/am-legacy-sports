@@ -79,7 +79,7 @@ const Team = () => {
                   <h3 className="text-lg font-semibold text-foreground">
                     {member.name}
                   </h3>
-                  <p className="text-sm text-gray">{member.role}</p>
+                  <p className="text-base text-gray">{member.role}</p>
                 </div>
               </motion.div>
             </div>
