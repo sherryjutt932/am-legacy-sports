@@ -21,7 +21,7 @@ export default function TagsMarquee({
     if (!trackRef.current) return;
 
     const ctx = gsap.context(() => {
-      const moveX = direction === "left" ? -50 : 50;
+      const moveX = direction === "left" ? -10 : 10;
 
       const tween = gsap.to(trackRef.current, {
         xPercent: moveX,

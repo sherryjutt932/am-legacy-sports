@@ -42,7 +42,7 @@ export default function Feedback() {
         {/* IMAGE CONTAINER */}
         <div className="w-full md:w-[25vw] shrink-0 relative aspect-square rounded-xl overflow-hidden">
           <div className="relative w-full h-full">
-            <AnimatePresence initial={false}>
+            <AnimatePresence initial={false} mode="sync">
               <motion.div
                 key={uniqueKey} // ✅ always unique → always animates
                 initial={{ clipPath: "inset(100% 0% 0% 0%)", scale: 1.02 }}

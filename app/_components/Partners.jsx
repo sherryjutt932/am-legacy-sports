@@ -9,7 +9,7 @@ const Partners = () => {
   return (
     <section className="overflow-hidden relative z-10 px-20 py-24 flex flex-col gap-16">
       <h2 className="mx-auto text-center text-[3rem] font-medium leading-normal text-foreground">
-        <TextAnimate animation="blurInUp" once={false} by="character">
+        <TextAnimate animation="blurInUp" once by="character">
           Our Partners
         </TextAnimate>
       </h2>

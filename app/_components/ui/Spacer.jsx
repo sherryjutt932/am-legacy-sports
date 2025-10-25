@@ -4,13 +4,24 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
-const Spacer = ({ className, children, fullWidth = false, ...props }) => {
+const Spacer = ({
+  className,
+  delay,
+  children,
+  width = "20rem",
+  fullWidth = false,
+  ...props
+}) => {
   return (
     <motion.div
-      initial={fullWidth ? { opacity: 0 } : { width: "2rem", opacity: 0 }}
-      whileInView={fullWidth ? { opacity: 1 } : { width: "20rem", opacity: 1 }}
+      initial={
+        fullWidth ? { opacity: 0, width: "5%" } : { width: "2rem", opacity: 0 }
+      }
+      whileInView={
+        fullWidth ? { opacity: 1, width: "100%" } : { width: width, opacity: 1 }
+      }
       transition={{
-        delay: 0.2,
+        delay: delay ? delay : 0.2,
         duration: fullWidth ? 1.2 : 2.4, // shorter fade if fullWidth
         ease: [0.16, 1, 0.3, 1],
       }}

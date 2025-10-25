@@ -25,19 +25,18 @@ export default function Tags({ data = defaultLogos }) {
   const reversedData = [...data].reverse();
 
   return (
-    <section className="relative my-12 flex flex-col items-center gap-12">
+    <section
+      id="TagsMarqueeTrigger"
+      className="relative my-12 flex flex-col items-center"
+    >
       {/* Top marquee */}
       <div style={maskStyle} className="max-w-[85%] w-full">
-        <TagsMarquee data={data} direction="left" triggerId="TopTagsMarquee" />
+        <TagsMarquee data={data} direction="left" />
       </div>
 
       {/* Bottom marquee */}
       <div style={maskStyle} className="max-w-full w-full">
-        <TagsMarquee
-          data={reversedData}
-          direction="right"
-          triggerId="BottomTagsMarquee"
-        />
+        <TagsMarquee data={reversedData} direction="right" />
       </div>
     </section>
   );

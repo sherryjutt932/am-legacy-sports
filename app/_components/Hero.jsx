@@ -3,6 +3,8 @@
 import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
+import StickyButton from "@/components/ui/StickyButton";
 
 const TextAnimate = dynamic(
   () => import("@/components/ui/text-animate").then((mod) => mod.TextAnimate),
@@ -81,13 +83,13 @@ export default function Hero() {
                 opportunities while advising investors and clubs on sustainable
                 sporting partnerships.
               </p>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-foreground text-foreground px-6 py-3 rounded-full hover:bg-foreground hover:text-background transition"
-              >
-                Learn More
-              </motion.button>
+              <Link href={"/"}>
+                <StickyButton
+                  parentClass={"text-dark"}
+                  text={"Contact us"}
+                  theme="light"
+                />
+              </Link>
             </BlurFade>
 
             <BlurFade

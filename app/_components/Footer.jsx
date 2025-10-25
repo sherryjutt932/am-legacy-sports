@@ -1,11 +1,18 @@
+"use client";
+
+import dynamic from "next/dynamic";
 import { Facebook } from "lucide-react";
 import { Instagram } from "lucide-react";
 import { Linkedin } from "lucide-react";
 import React from "react";
+import StickyButton from "@/components/ui/StickyButton";
+import Link from "next/link";
+const Marquee = dynamic(() => import("../_components/ui/Marquee"));
 
 const Footer = () => {
   return (
     <>
+      <Marquee direction="left" speed={0.7} />
       <footer className="overflow-hidden relative z-10 px-20 py-24 flex flex-col gap-16">
         <div className="grid grid-cols-[67rem_1fr] gap-8">
           <div className="grid grid-cols-3 gap-3">
@@ -29,7 +36,15 @@ const Footer = () => {
               placeholder="Message"
             ></textarea>
           </div>
-          <div className="flex justify-end">a</div>
+          <div className="flex justify-end">
+            <Link href={"/"}>
+              <StickyButton
+                parentClass={"text-dark"}
+                text={"Contact us"}
+                theme="light"
+              />
+            </Link>
+          </div>
         </div>
         <div className="grid grid-cols-4 gap-8">
           <div className="space-y-2">

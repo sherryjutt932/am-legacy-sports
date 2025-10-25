@@ -3,6 +3,8 @@
 import dynamic from "next/dynamic";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import StickyButton from "@/components/ui/StickyButton";
 
 const TextAnimate = dynamic(
   () => import("@/components/ui/text-animate").then((mod) => mod.TextAnimate),
@@ -31,7 +33,7 @@ const Team = () => {
     <section className="px-20 py-24 flex flex-col justify-center items-center gap-16">
       {/* Heading */}
       <h2 className="text-[3rem] font-medium leading-normal text-foreground">
-        <TextAnimate animation="blurInUp" once={false} by="character">
+        <TextAnimate animation="blurInUp" once by="character">
           Our Team
         </TextAnimate>
       </h2>
@@ -86,6 +88,13 @@ const Team = () => {
           </motion.div>
         ))}
       </div>
+      <Link href={"/"} className="mx-auto">
+        <StickyButton
+          parentClass={"text-dark"}
+          text={"Contact us"}
+          theme="light"
+        />
+      </Link>
     </section>
   );
 };
