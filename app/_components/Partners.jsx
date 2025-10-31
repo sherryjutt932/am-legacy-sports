@@ -7,8 +7,8 @@ import Spacer from "./ui/Spacer";
 
 const Partners = () => {
   return (
-    <section className="overflow-hidden relative z-10 px-20 py-24 flex flex-col gap-16">
-      <h2 className="mx-auto text-center text-[3rem] font-medium leading-normal text-foreground">
+    <section className="overflow-hidden relative z-10 px-con py-12 sm:py-24 flex flex-col gap-4 sm:gap-16">
+      <h2 className="mx-auto text-center text-3xl sm:text-[3rem] font-medium leading-normal text-foreground">
         <TextAnimate animation="blurInUp" once by="character">
           Our Partners
         </TextAnimate>

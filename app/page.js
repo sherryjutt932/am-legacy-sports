@@ -36,11 +36,11 @@ export default function Home() {
       <Loader />
       <Hero />
       <OurServices />
-      <WhatWeDo />
+       <WhatWeDo />
       <Stats />
       <Team />
       <Partners />
-      <Feedback />
+      <Feedback /> 
     </>
   );
 }

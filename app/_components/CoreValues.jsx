@@ -21,25 +21,27 @@ const values = [
 
 const CoreValues = () => {
   return (
-    <section className="pt-16 px-con flex flex-col gap-20">
+    <section className="pt-12 sm:pt-16 px-con flex flex-col gap-10 sm:gap-20">
       {/* Core Values */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-12">
         {values.map((value, index) => (
           <div
             key={index}
-            className="lex-1 p-4 text-center flex flex-col justify-start items-center"
+            className="flex-1 p-4 sm:text-center flex flex-col sm:justify-start sm:items-center max-sm:bg-white/5 max-sm:rounded-lg"
           >
-            <Image
+            <div className="flex sm:flex-col max-sm:gap-2 items-center">
+              <Image
               src={value.image}
               alt={value.title}
               width={400}
               height={400}
-              className="size-32"
+              className="size-14 sm:size-32"
             />
-            <h3 className="text-[2rem] md:text-[2.5rem] font-medium leading-normal text-foreground mt-4">
+            <h3 className="text-[2rem] md:text-[2.5rem] font-medium leading-normal text-foreground sm:mt-4">
               {value.title}
             </h3>
-            <p className="text-base sm:text-lg md:text-xl text-gray mt-4 max-w-[90%]">
+            </div>
+            <p className="text-base sm:text-lg md:text-xl text-gray mt-4 sm:max-w-[90%]">
               {value.text}
             </p>
           </div>

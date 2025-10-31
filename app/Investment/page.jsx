@@ -5,7 +5,7 @@ const Investment = () => {
   return (
     <>
       <HeroSec />
-      <Scouting />
+      {/* <Scouting /> */}
     </>
   );
 };

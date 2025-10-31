@@ -13,12 +13,12 @@ const StickyButton = ({ text, multiArrow, theme = "trans", parentClass }) => {
     arrowControls.set({ x: "0%" });
     arrowControls.start({
       x: "100%",
-      transition: { duration: 0.5 },
+      transition: { duration: 0.3 },
     });
   };
 
   const parentClasses = {
-    light: "bg-primary border border-background text-background",
+    light: "bg-primary border border-background/50 text-background",
     dark: "bg-white border border-[#CFCFCF] text-white",
     trans: "bg-white/20 border border-[#CFCFCF] text-white",
   };
@@ -39,7 +39,7 @@ const StickyButton = ({ text, multiArrow, theme = "trans", parentClass }) => {
     <motion.div
       ref={buttonRef}
       className={cn(
-        "shrink-0 capitalize group cursor-pointer flex items-center justify-center p-1.5 rounded-2xl text-base sm:text-lg backdrop-blur-sm overflow-hidden transition-colors duration-300",
+        "shrink-0 capitalize group cursor-pointer flex items-center justify-center p-1.5 rounded-2xl text-sm sm:text-lg overflow-hidden transition-colors duration-300",
         parentClasses[theme],
         parentClass
       )}
@@ -61,8 +61,8 @@ const StickyButton = ({ text, multiArrow, theme = "trans", parentClass }) => {
       {/* Right arrow area */}
       <div
         className={cn(
-          "relative h-12 sm:h-12 flex rounded-xl items-center justify-center transition-colors",
-          multiArrow ? "w-28" : "w-12",
+          "relative h-9 sm:h-12 flex rounded-xl items-center justify-center transition-colors",
+          multiArrow ? "w-28" : "w-9 sm:w-12",
           arrowClasses[theme]
         )}
       >

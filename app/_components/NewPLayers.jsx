@@ -45,10 +45,24 @@ const NewPlayers = () => {
   const uniqueKey = `${player.name}-${Date.now()}`; // unique for animation refresh
 
   return (
-    <section className="px-con pt-20 flex flex-col gap-6 overflow-hidden">
-      <div className="flex flex-col lg:flex-row gap-10">
+    <section className="px-con sm:pt-20 flex flex-col gap-6 overflow-hidden">
+      <div className="flex flex-col lg:flex-row gap-2 sm:gap-10 h-fit">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1 },
+          }}
+          transition={{
+            duration: 0.6,
+            ease: [0.37, 0, 0.63, 1],
+          }}
+          className="sm:hidden h-fit pb-4 text-2xl flex items-center gap-3">
+          <div className="h-[1.2em] rounded-full w-[3px] bg-primary"></div>
+          <span>New Player Signed</span>
+        </motion.div>
+
         {/* Image with Feedback-style animation */}
-        <div className="flex-1 h-[35rem] rounded-xl overflow-hidden bg-white/5 flex items-center justify-center relative">
+        <div className="lg:flex-1 h-[15rem] sm:h-[35rem] rounded-xl overflow-hidden bg-white/5 flex items-center justify-center relative">
           <AnimatePresence initial={false} mode="sync">
             <motion.div
               key={uniqueKey}
@@ -104,9 +118,8 @@ const NewPlayers = () => {
                 duration: 0.6,
                 ease: [0.37, 0, 0.63, 1],
               }}
-              className="pt-16 text-2xl flex items-center gap-3"
-            >
-              <div className="h-[90%] rounded-full w-[3px] bg-primary"></div>
+              className="max-sm:hidden h-fit sm:pt-16 text-2xl flex items-center gap-3">
+              <div className="h-[1.2em] rounded-full w-[3px] bg-primary"></div>
               <span>New Player Signed</span>
             </motion.div>
 
@@ -119,7 +132,7 @@ const NewPlayers = () => {
                 duration: 0.6,
                 ease: [0.37, 0, 0.63, 1],
               }}
-              className="text-[3rem] font-medium leading-normal text-foreground transition-opacity duration-500"
+              className="text-3xl sm:text-[3rem] font-medium leading-normal text-foreground transition-opacity duration-500"
             >
               {player.name}
             </motion.h2>
@@ -135,7 +148,7 @@ const NewPlayers = () => {
                 duration: 0.6,
                 ease: [0.37, 0, 0.63, 1],
               }}
-              className="p-4 text-base sm:text-lg md:text-xl text-gray"
+              className="p-3 sm:p-4 text-base sm:text-lg md:text-xl text-gray"
             >
               {player.description}
             </motion.p>
@@ -151,7 +164,7 @@ const NewPlayers = () => {
                 duration: 0.6,
                 ease: [0.37, 0, 0.63, 1],
               }}
-              className="p-4 text-base sm:text-lg md:text-xl text-gray"
+              className="p-3 sm:p-4 text-base sm:text-lg md:text-xl text-gray"
             >
               Date posted | {player.date} | Posted By | {player.author}
             </motion.h6>
@@ -162,7 +175,7 @@ const NewPlayers = () => {
       {/* Pagination Dots */}
       <motion.div
         whileHover={{ scale: 1.1 }}
-        className="mx-auto my-8 origin-bottom w-fit flex gap-2"
+        className="mx-auto my-4 sm:my-8 origin-bottom w-fit flex gap-2"
       >
         {/* <div className="cursor-pointer flex items-center justify-center bg-foreground/5 rounded-full h-7 w-auto aspect-square hover:bg-foreground/15 transform-colors text-secondary">
           {"<"}
@@ -175,11 +188,10 @@ const NewPlayers = () => {
               className={`cursor-pointer p-1 group`}
             >
               <div
-                className={`rounded-full transition-all duration-300 ${
-                  activeIndex === i
-                    ? "bg-secondary h-2 w-6"
-                    : "bg-gray/40 group-hover:bg-gray group-hover:scale-125 h-2 w-2"
-                }`}
+                className={`rounded-full transition-all duration-300 ${activeIndex === i
+                  ? "bg-secondary h-2 w-6"
+                  : "bg-gray/40 group-hover:bg-gray group-hover:scale-125 h-2 w-2"
+                  }`}
               ></div>
             </div>
           ))}

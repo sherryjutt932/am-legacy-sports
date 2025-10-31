@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Button from "./ui/Button";
 import Hamburger from "./ui/Hamburger";
 import Sidebar from "./ui/Sidebar";
 import {
@@ -12,7 +11,6 @@ import {
   AnimatePresence,
   useMotionTemplate,
 } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -98,7 +96,7 @@ const Header = () => {
           alt="brandscore"
           width={400}
           height={400}
-          className="h-[4rem] w-auto"
+          className="h-[3rem] sm:h-[4rem] w-auto"
         />
       </Link>
 
@@ -178,19 +176,19 @@ const Header = () => {
       <div className="pointer-events-auto max-sm:hidden flex items-center gap-2">
         <div className="flex justify-end items-start gap-3">
           <button
-            className="p-3 cursor-pointer bg-[#33333310] hover:bg-white/5 active:bg-primary/10 border border-gray/20 rounded-lg transition-all"
+            className="p-3 cursor-pointer bg-[#33333310] hover:bg-white/20 active:bg-primary/10 border border-gray/20 rounded-lg transition-all"
             aria-label="Previous feedback"
           >
             <Linkedin className="w-5 h-5" />
           </button>
           <button
-            className="p-3 cursor-pointer bg-[#33333310] hover:bg-white/5 active:bg-primary/10 border border-gray/20 rounded-lg transition-all"
+            className="p-3 cursor-pointer bg-[#33333310] hover:bg-white/20 active:bg-primary/10 border border-gray/20 rounded-lg transition-all"
             aria-label="Previous feedback"
           >
             <Facebook className="w-5 h-5" />
           </button>
           <button
-            className="p-3 cursor-pointer bg-[#33333310] hover:bg-white/5 active:bg-primary/10 border border-gray/20 rounded-lg transition-all"
+            className="p-3 cursor-pointer bg-[#33333310] hover:bg-white/20 active:bg-primary/10 border border-gray/20 rounded-lg transition-all"
             aria-label="Previous feedback"
           >
             <Instagram className="w-5 h-5" />
@@ -203,12 +201,12 @@ const Header = () => {
         className="cursor-pointer pointer-events-auto sm:hidden relative"
         onClick={handleNavToggle}
       >
-        <Hamburger active={isOpen} />
+        <Hamburger dark active={isOpen} />
       </button>
 
       {/* Sidebar (mobile menu) */}
       <AnimatePresence mode="sync">
-        {isOpen && <Sidebar handleClose={handleNavClose} />}
+        {isOpen && <Sidebar NavItems={NavItems} handleClose={handleNavClose} />}
       </AnimatePresence>
     </header>
   );

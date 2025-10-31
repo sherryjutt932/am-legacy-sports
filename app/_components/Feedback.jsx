@@ -37,8 +37,8 @@ export default function Feedback() {
   const { name, title, img, text, rating } = feedbacks[current];
 
   return (
-    <section className="overflow-hidden relative z-10 px-6 md:px-20 py-24 flex flex-col justify-center items-center gap-16">
-      <div className="w-full max-w-7xl bg-[#73737320] flex flex-col md:flex-row gap-9 p-10 rounded-2xl backdrop-blur-xl border border-white/10 relative overflow-hidden">
+    <section className="overflow-hidden relative z-10 px-con py-12 sm:py-24 flex flex-col justify-center items-center gap-8 sm:gap-16">
+      <div className="w-full max-w-7xl bg-[#73737320] flex flex-col md:flex-row gap-2 sm:gap-9 p-4 sm:p-10 rounded-2xl backdrop-blur-xl border border-white/10 relative overflow-hidden">
         {/* IMAGE CONTAINER */}
         <div className="w-full md:w-[25vw] shrink-0 relative aspect-square rounded-xl overflow-hidden">
           <div className="relative w-full h-full">
@@ -126,9 +126,9 @@ export default function Feedback() {
           <TextAnimate
             duration={0.5}
             animation="blurInUp"
-            by="character"
+            by="word"
             once
-            className="grow text-xl leading-relaxed transition-all duration-500 text-foreground/90"
+            className="grow text-base sm:text-xl leading-relaxed transition-all duration-500 text-foreground/90"
           >
             " {text} "
           </TextAnimate>
@@ -153,7 +153,7 @@ export default function Feedback() {
           alt={"trophy"}
           width={500}
           height={500}
-          className="absolute pointer-events-none right-0 bottom-0 w-[15vw] h-auto saturate-0 translate-[20%] rotate-[-30deg]"
+          className="absolute pointer-events-none right-0 bottom-0 w-[30vw] sm:w-[15vw] h-auto saturate-0 translate-[20%] rotate-[-30deg]"
         />
       </div>
     </section>

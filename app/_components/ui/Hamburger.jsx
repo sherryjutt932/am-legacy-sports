@@ -16,11 +16,12 @@ const Hamburger = ({ active, className, dark = false, ...props }) => {
         initial={false}
         animate={active ? "open" : "closed"}
         className={cn(
-          "outline-none relative h-10 w-10 overflow-hidden rounded-lg transition-colors duration-300 bg-white border border-dark text-dark z-[1000000]",
+          "outline-none relative h-9 w-9 overflow-hidden rounded-lg transition-colors duration-300 bg-white border border-background/20 text-background z-[1000000]",
           className
         )}
       >
-        <motion.span
+        <div className="scale-75 absolute h-10 w-10 left-1/2 top-1/2 -translate-1/2">
+          <motion.span
           variants={VARIANTS.top}
           className={cn(
             "origin-left absolute h-[2px] w-6",
@@ -38,6 +39,7 @@ const Hamburger = ({ active, className, dark = false, ...props }) => {
           transition={{ ease: "easeInOut", duration: 0.7 }}
           style={{ y: "-50%", left: "50%", x: "-50%", top: "63%" }}
         />
+        </div>
       </motion.div>
     </MotionConfig>
   );

@@ -81,17 +81,22 @@ const OurServices = () => {
 
   return (
     <section ref={sectionRef} className="relative h-[400vh] w-full">
-      <div className="sticky top-0 h-screen px-20 flex flex-col justify-between gap-12 overflow-hidden">
+      <div className="sticky top-0 h-screen px-con flex flex-col justify-between gap-12 overflow-hidden">
         {/* Header */}
-        <div className="pt-16 text-2xl flex items-center gap-3">
-          <div className="h-[90%] rounded-full w-[3px] bg-primary"></div>
-          <span>Our Services</span>
+        <div className="pt-8 sm:pt-16 flex flex-col gap-5">
+          <div className="text-2xl flex items-center gap-3">
+            <div className="h-[85%] rounded-full w-[3px] bg-primary"></div>
+            <span>Our Services</span>
+          </div>
+          <Link href="/" className="sm:hidden text-sm mb-4 block">
+            <AnimatedShinyText>Explore All</AnimatedShinyText>
+          </Link>
         </div>
 
         {/* Main content area */}
-        <main className="flex items-center relative">
+        <main className="flex items-center sm:relative">
           {/* Service text */}
-          <h2 className="text-[3rem] font-medium leading-normal text-foreground transition-opacity duration-500 mr-[24vw]">
+          <h2 className="text-3xl sm:text-[3rem] font-medium leading-normal text-foreground transition-opacity duration-500 sm:mr-[24vw] relative z-50">
             <TextAnimate
               key={activeService}
               delay={0.2}
@@ -105,8 +110,11 @@ const OurServices = () => {
           </h2>
 
           {/* Football — independent continuous scroll animation */}
-          <div className="absolute z-20 right-0 top-1/2 -translate-y-1/2 translate-x-[58%]">
-            <motion.div className="relative px-4 w-[35vw]" style={{ rotate }}>
+          <div className="absolute z-20 right-0 top-0 sm:top-1/2 -translate-y-[30%] sm:-translate-y-1/2 translate-x-[50%] sm:translate-x-[58%]">
+            <motion.div
+              className="relative px-4 w-[90vw] sm:w-[35vw]"
+              style={{ rotate }}
+            >
               <div className="w-full h-auto bg-background rounded-full">
                 <Image
                   src="/Football-Big.png"
@@ -118,7 +126,7 @@ const OurServices = () => {
               </div>
               <Link
                 href="/"
-                className="absolute left-0 bottom-1/2 -translate-1/2 rotate-270 w-fit"
+                className="max-sm:hidden absolute left-0 bottom-1/2 -translate-1/2 rotate-270 w-fit"
               >
                 <AnimatedShinyText>Explore All</AnimatedShinyText>
                 <div className="absolute left-1/2 top-full w-[2px] h-12 bg-gradient-to-b from-secondary to-transparent -translate-x-1/2 pointer-events-none"></div>
@@ -128,16 +136,20 @@ const OurServices = () => {
         </main>
 
         {/* Progress Bars */}
-        <div className="pb-6 grid gap-8 grid-cols-4">
+        <div className="pb-6 grid gap-8 grid-cols-1 sm:grid-cols-4">
           {services.map((service, i) => {
-            let active = activeService >= i;
+            const active = activeService >= i;
+
+            // On small screens, show only the currently active service
+            const isVisibleOnSmall = activeService === i;
+
             return (
               <motion.div
                 key={service.id}
-                className={`flex flex-col gap-6 transition-opacity duration-500 ${
-                  active ? "opacity-100" : "opacity-50"
-                }`}
-              >
+                className={`flex flex-col gap-4 sm:gap-6 transition-opacity duration-500
+                            ${active ? "opacity-100" : "opacity-50"}
+                            ${!isVisibleOnSmall ? "hidden sm:flex" : "flex"}`}
+                            >
                 <motion.div
                   animate={{
                     x: active ? 10 : 0,
@@ -146,6 +158,7 @@ const OurServices = () => {
                 >
                   {service.id}
                 </motion.div>
+
                 <div className="h-px bg-foreground/30 w-full relative">
                   <motion.div
                     className="absolute left-0 top-1/2 -translate-y-1/2 bg-foreground origin-left"
@@ -157,6 +170,7 @@ const OurServices = () => {
                     }}
                   />
                 </div>
+
                 <motion.div
                   animate={{
                     x: active ? 10 : 0,

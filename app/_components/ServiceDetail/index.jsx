@@ -1,8 +1,6 @@
 import React from "react";
 import Content from "./Content";
 import { TextAnimate } from "@/components/ui/text-animate";
-import Link from "next/link";
-import StickyButton from "@/components/ui/StickyButton";
 
 const sections = [
   {
@@ -72,53 +70,16 @@ const sections = [
 ];
 
 const ServiceDetail = () => {
-  const List = [
-    {
-      title: "SEO (Search Engine Optimization)",
-      detail: "Boost your online visibility and attract more organic traffic.",
-      image: "/service3.jpeg",
-    },
-    {
-      title: "PPC (Pay-Per-Click)",
-      detail:
-        "Advertising: Maximize your ROI with targeted advertising campaigns.",
-      image: "/service3.jpeg",
-    },
-    {
-      title: "Social Media Marketing",
-      detail:
-        "Engage your audience and build your brand across all major social platforms.",
-      image: "/service3.jpeg",
-    },
-    {
-      title: "Content Marketing",
-      detail:
-        "Create compelling content that resonates with your audience and drives conversions.",
-      image: "/service3.jpeg",
-    },
-    {
-      title: "Email Marketing",
-      detail:
-        "Develop effective email campaigns to nurture leads and retain customers.",
-      image: "/service3.jpeg",
-    },
-    {
-      title: "Web Design & Development",
-      detail: "Build a user-friendly, accessible, and SEO-optimized website.",
-      image: "/service3.jpeg",
-    },
-  ];
-
   return (
-    <div className="flex flex-col items-center gap-24 py-24">
+    <div className="flex flex-col items-center gap-12 sm:gap-24 py-14 sm:py-24">
       {/* header */}
-      <div className="px-8 sm:px-24 w-full flex flex-col items-center gap-1">
-        <h2 className="text-[3rem] font-medium leading-normal text-foreground">
+      <div className="px-con w-full flex flex-col items-center gap-1">
+        <h2 className="text-3xl sm:text-[3rem] font-medium leading-normal text-foreground">
           <TextAnimate animation="blurInUp" once by="character">
             What We Provide
           </TextAnimate>
         </h2>
-        <p className="text-base sm:text-lg md:text-xl text-gray mt-4 max-w-[65ch] text-center">
+        <p className="text-base sm:text-lg md:text-xl text-gray mt-2 sm:mt-4 max-w-[95%] sm:max-w-[65ch] text-center">
           We connect elite African talent with global football opportunities
           while advising investors and clubs on sustainable sporting
           partnerships.
@@ -129,7 +90,7 @@ const ServiceDetail = () => {
       <Content List={sections} />
 
       {/* footer */}
-      <div className="px-8 sm:px-24 w-full flex flex-col items-center gap-1 text-center">
+      <div className="px-con w-full flex flex-col items-center gap-1 text-center">
         <p className="text-base sm:text-lg md:text-xl text-foreground">
           Not sure which services you need?
         </p>
@@ -137,13 +98,6 @@ const ServiceDetail = () => {
           {`Reach us out to book a consultation with one of our experts today. We'll help you identify the best strategies
           to grow your career and achieve your goals.`}
         </p>
-        <Link href={"/"}>
-          <StickyButton
-            parentClass={"text-dark"}
-            text={"Contact us"}
-            theme="light"
-          />
-        </Link>
       </div>
     </div>
   );

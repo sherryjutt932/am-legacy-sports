@@ -56,13 +56,13 @@ export default function Marquee({ List = DefaultList, direction, speed }) {
       return (
         <div
           key={i}
-          className="flex items-center w-fit py-3 px-6 gap-12 flex-shrink-0"
+          className="flex items-center w-fit sm:py-3 px-3 sm:px-6 gap-6 sm:gap-12 flex-shrink-0"
         >
-          <div className="text-[7.5vw] text-dark whitespace-nowrap flex-shrink-0 font-semibold">
+          <div className="text-[10vw] sm:text-[7.5vw] text-dark whitespace-nowrap flex-shrink-0 font-semibold">
             {item}
           </div>
           {i != ArrayData.length && (
-            <div className="size-12 bg-secondary rounded-full"></div>
+            <div className="size-[5vw] sm:size-[2.6vw] bg-secondary rounded-full"></div>
           )}
         </div>
       );

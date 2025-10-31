@@ -46,11 +46,11 @@ const stats = [
 
 const Stats = () => {
   return (
-    <section className="max-w-7xl mx-auto px-20 pt-24 flex flex-col w-full">
+    <section className="max-w-7xl mx-auto px-con pt-12 sm:pt-24 flex flex-col w-full">
       {stats.map((stat, i) => (
         <div className="flex flex-col w-full" key={i}>
-          <div className="flex-1 flex gap-9 px-10 py-8 items-center">
-            <div className="min-w-[2.5ch] text-right text-[3rem] font-medium text-foreground">
+          <div className="flex-1 flex gap-6 sm:gap-9 px-4 sm:px-10 py-6 sm:py-8 items-center">
+            <div className="min-w-[2.5ch] text-right text-4xl sm:text-[3rem] font-medium text-foreground">
               <TextAnimate once animation="blurIn" by="character">
                 {stat.value}
               </TextAnimate>
@@ -58,7 +58,7 @@ const Stats = () => {
             <BlurFade
               inView={true}
               delay={0.1}
-              className="grow text-xl text-gray leading-snug"
+              className="grow text-base sm:text-xl text-gray leading-snug"
             >
               {stat.label}
             </BlurFade>
@@ -68,7 +68,7 @@ const Stats = () => {
                 alt={stat.label}
                 width={150}
                 height={150}
-                className="size-16"
+                className="size-12 sm:size-16"
               />
             </BlurFade>
           </div>

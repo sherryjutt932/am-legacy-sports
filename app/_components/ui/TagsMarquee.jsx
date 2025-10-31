@@ -56,13 +56,13 @@ export default function TagsMarquee({
         {repeatedData.map((item, i) => (
           <div
             key={i}
-            className="bg-black/10 hover:bg-white/5 transition-colors duration-200 ease-in-out flex-shrink-0 grid place-content-center mx-2 md:mx-4 border border-[#313131] hover:border-main/60 p-4 min-w-[12rem] md:min-w-[20rem] h-[6rem] md:h-[10rem] rounded-[1.25rem] backdrop-blur-2xl"
+            className="bg-black/10 hover:bg-white/5 transition-colors duration-200 ease-in-out flex-shrink-0 grid place-content-center mx-2 md:mx-4 border border-[#313131] hover:border-main/60 p-4 min-w-[8rem] sm:min-w-[12rem] md:min-w-[20rem] h-[5rem] sm:h-[6rem] md:h-[10rem] rounded-xl sm:rounded-[1.25rem] backdrop-blur-2xl"
           >
             <img
               src={item}
               alt={`brand-${i}`}
               loading="lazy"
-              className="h-16 w-auto max-w-48 block object-contain"
+              className="h-8 sm:h-16 w-auto max-w-24 sm:max-w-48 block object-contain"
             />
           </div>
         ))}

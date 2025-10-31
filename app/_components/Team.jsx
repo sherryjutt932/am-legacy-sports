@@ -5,6 +5,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import StickyButton from "@/components/ui/StickyButton";
+import { useIsMobile } from "@/lib/hooks";
 
 const TextAnimate = dynamic(
   () => import("@/components/ui/text-animate").then((mod) => mod.TextAnimate),
@@ -12,10 +13,10 @@ const TextAnimate = dynamic(
 );
 
 const team = [
-  { name: "Amir Khan", role: "CEO & Founder", img: "/avatar.png" },
-  { name: "Sarah Malik", role: "Marketing Director", img: "/avatarG.png" },
-  { name: "James Morgan", role: "Head of Operations", img: "/avatar.png" },
-  { name: "Amina Yusuf", role: "Creative Strategist", img: "/avatarG.png" },
+  { name: "Ateeq Mahmoud", role: "Director | FIFA License Agent", img: "/avatar.png" },
+  { name: "Nadia Mohammed", role: "Digital Manager", img: "/avatarG.png" },
+  { name: "Abdul Fataw Mikail", role: "Scout", img: "/avatar.png" },
+  { name: "Rose Okyere", role: "Marketing", img: "/avatarG.png" },
 ];
 
 const textVariants = {
@@ -29,17 +30,19 @@ const imageVariant = {
 };
 
 const Team = () => {
+  const isMobile = useIsMobile();
+
   return (
-    <section className="px-20 py-24 flex flex-col justify-center items-center gap-16">
+    <section className="px-con py-12 sm:py-24 flex flex-col justify-center items-center gap-6 sm:gap-16">
       {/* Heading */}
-      <h2 className="text-[3rem] font-medium leading-normal text-foreground">
+      <h2 className="text-3xl sm:text-[3rem] font-medium leading-normal text-foreground">
         <TextAnimate animation="blurInUp" once by="character">
           Our Team
         </TextAnimate>
       </h2>
 
       {/* Team Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 w-full max-w-7xl">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-10 w-full max-w-7xl">
         {team.map((member) => (
           <motion.div
             key={member.name}
@@ -51,7 +54,7 @@ const Team = () => {
             {/* Apple-style animated border glow */}
 
             {/* Image */}
-            <div className="relative w-full h-[22rem] overflow-hidden rounded-[calc(1rem+1px)]">
+            <div className="relative w-full h-[15rem] sm:h-[22rem] overflow-hidden rounded-[calc(1rem+1px)]">
               <motion.img
                 transition={{ type: "spring", stiffness: 100, damping: 15 }}
                 variants={imageVariant}
@@ -63,13 +66,16 @@ const Team = () => {
             </div>
 
             {/* Info */}
-            <div className="absolute bottom-4 left-5 right-5 flex gap-3 overflow-hidden">
+            <div className="absolute left-3 right-3 bottom-3 sm:bottom-4 sm:left-5 sm:right-5 flex gap-3 overflow-hidden">
               <motion.div
-                variants={textVariants}
+                variants={isMobile ? {
+                  rest: { x: 0 },
+                  hover: { x: 0 },
+                } : textVariants}
                 className="flex items-center gap-3"
               >
                 {/* Accent Line */}
-                <div className="py-1 h-full w-[3px]">
+                <div className="max-sm:hidden py-1 h-full w-[3px]">
                   <div className="h-full w-full bg-primary rounded-full"></div>
                 </div>
 
@@ -78,20 +84,20 @@ const Team = () => {
                   transition={{ type: "spring", stiffness: 100, damping: 15 }}
                   className="flex flex-col"
                 >
-                  <h3 className="text-lg font-semibold text-foreground">
+                  <h3 className="text-sm sm:text-lg font-medium sm:font-semibold text-foreground">
                     {member.name}
                   </h3>
-                  <p className="text-base text-gray">{member.role}</p>
+                  <p className="text-xs sm:text-base text-gray">{member.role}</p>
                 </div>
               </motion.div>
             </div>
           </motion.div>
         ))}
       </div>
-      <Link href={"/"} className="mx-auto">
+      <Link href={"#contact"} className="mx-auto">
         <StickyButton
           parentClass={"text-dark"}
-          text={"Contact us"}
+          text={"reach out to book"}
           theme="light"
         />
       </Link>

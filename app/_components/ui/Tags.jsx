@@ -27,7 +27,7 @@ export default function Tags({ data = defaultLogos }) {
   return (
     <section
       id="TagsMarqueeTrigger"
-      className="relative my-12 flex flex-col items-center"
+      className="relative my-8 sm:my-12 flex flex-col items-center"
     >
       {/* Top marquee */}
       <div style={maskStyle} className="max-w-[85%] w-full">

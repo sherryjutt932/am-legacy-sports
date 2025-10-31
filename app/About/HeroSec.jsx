@@ -19,8 +19,8 @@ const BlurFade = dynamic(
 
 const HeroSec = () => {
   return (
-    <section className="min-h-[700px] px-con w-full flex flex-col justify-between items-center gap-12">
-      <div className="h-32" />
+    <section className="min-h-[600px] sm:min-h-[700px] px-con w-full flex flex-col justify-between items-center gap-12">
+        <div className="h-20 sm:h-32" />
 
       <div className="grow flex flex-col gap-6 items-center justify-center">
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-medium text-center text-foreground drop-shadow-2xl leading-tight">
@@ -30,15 +30,15 @@ const HeroSec = () => {
         </h1>
       </div>
 
-      <BlurFade delay={0.3} className="w-full flex justify-between">
-        <p className="text-base sm:text-lg md:text-xl text-gray mt-4 max-w-[45ch]">
+      <BlurFade delay={0.3} className="w-full flex max-sm:flex-col max-sm:items-center sm:justify-between gap-4">
+        <p className="text-base sm:text-lg md:text-xl text-gray mt-4 max-w-[min(45ch,95%)] max-sm:text-center">
           We provide a wide range of services including expert advice and
           guidance, Player management, Intermediary services and Player sales
         </p>
-        <Link href={"/"}>
+        <Link href={"#contact"}>
           <StickyButton
             parentClass={"text-dark"}
-            text={"Contact us"}
+            text={"reach out to book"}
             theme="light"
           />
         </Link>

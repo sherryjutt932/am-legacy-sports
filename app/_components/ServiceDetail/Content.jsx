@@ -243,17 +243,17 @@ const Content = ({ List = [] }) => {
         <div className="ImagesStack w-full h-fit sm:pt-[10vh]">
           {List.map((item, index) => {
             return (
-              <div key={index} className="px-8 sm:px-24 py-6">
+              <div key={index} className="px-con py-6">
                 <div className={`sm:hidden mb-4 mountAnimBelow`}>
-                  <div className=" text-4xl leading-tight mb-2">
+                  <div className="text-2xl sm:text-4xl leading-tight mb-2">
                     {item.title}
                   </div>
-                  <div className="text-xl text-grayL leading-relaxed max-w-[40ch] mb-10">
+                  <div className="text-base sm:text-xl text-gray leading-relaxed max-w-[40ch] mb-4 sm:mb-10">
                     {item.detail}
                   </div>
                 </div>
 
-                <div className="parallexImage w-full h-[25rem] sm:h-[80vh] flex">
+                <div className="parallexImage w-full h-[20rem] sm:h-[80vh] flex">
                   <div className="flex-1 skeleton overflow-hidden bg-white/5">
                     <Image
                       src={item.image}
