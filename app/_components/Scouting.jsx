@@ -55,7 +55,7 @@ const Scouting = () => {
   };
   
   return (
-    <section ref={sectionRef} className="relative flex sm:h-[300vh]">
+    <section ref={sectionRef} className="relative flex sm:h-[300vh] bg-background">
       <div className="sm:sticky sm:top-0 pt-12 sm:pt-36 pb-8 sm:pb-20 px-con flex max-sm:flex-col gap-4 sm:gap-8 w-full items-start h-fit sm:min-h-screen overflow-hidden">
         {/* LEFT TEXT */}
         <div className="sm:flex-1 max-sm:w-full flex flex-col">

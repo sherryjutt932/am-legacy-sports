@@ -13,7 +13,7 @@ const TextAnimate = dynamic(
 );
 
 const team = [
-  { name: "Ateeq Mahmoud", role: "Director | FIFA License Agent", img: "/avatar.png" },
+  { name: "Ateeq Mahmoud", role: "Founder and CEO | FIFA License Agent", img: "/avatar.png" },
   { name: "Nadia Mohammed", role: "Digital Manager", img: "/avatarG.png" },
   { name: "Abdul Fataw Mikail", role: "Scout", img: "/avatar.png" },
   { name: "Rose Okyere", role: "Marketing", img: "/avatarG.png" },

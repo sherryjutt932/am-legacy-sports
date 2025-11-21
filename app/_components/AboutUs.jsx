@@ -71,7 +71,7 @@ const AboutUs = () => {
           </div>
         </div>
         <p className="text-base sm:text-lg md:text-xl text-gray max-w-[90%] w-[40ch] text-center *:text-white *:font-semibold">
-          From Africa to Europe, we bridge <b>opportunity</b> and ambition with
+          From Africa to Europe, we bridge opportunity and ambition with
           professionalism and purpose.
         </p>
       </div>
@@ -95,7 +95,7 @@ const AboutUs = () => {
             />
           </div>
           <p className="*:text-white *:font-semibold text-base sm:text-lg md:text-xl text-gray max-w-[90%]">
-            Founded by <b>FIFA-licensed</b> agent <b>Ateeq Mahmoud</b>, we
+            Founded by FIFA-licensed agent Ateeq Mahmoud, we
             specialize in player representation, football club investment, and
             long-term advisory services.
           </p>

@@ -22,7 +22,7 @@ const AnimatedShinyText = ({
       {...props}
     >
       {children}
-      <div className="absolute left-4 right-4 bottom-[-1px] h-[1px] bg-gradient-to-r from-transparent via-secondary to-transparent group-hover:scale-x-110"></div>
+      <div className="absolute left-4 right-4 bottom-[-1px] h-[1px] bg-gradient-to-r from-transparent via-secondary to-transparent group-hover:scale-x-110 max-w-[100%]"></div>
     </span>
   );
 };
