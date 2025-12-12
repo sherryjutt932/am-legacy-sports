@@ -4,6 +4,7 @@ import Scouting from "../_components/Scouting";
 import Button from "../_components/ui/Button";
 import HeroSec from "./HeroSec";
 import Link from "next/link";
+import MajorDeal from "../_components/MajorDeal";
 
 const Investment = () => {
   return (
@@ -25,7 +26,8 @@ const Investment = () => {
           </Link>
         </div>
       </section>
-      <Scouting />
+      <MajorDeal />
+      {/* <Scouting /> */}
     </>
   );
 };

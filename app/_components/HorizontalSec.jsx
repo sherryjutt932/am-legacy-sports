@@ -105,7 +105,7 @@ const HorizontalSec = () => {
 
         if (!isTab) {
           const tl2 = gsap.timeline();
-          tl2.to("#sticky", { yPercent: 100, ease: "none" });
+          tl2.to("#sticky", { yPercent: 40, ease: "none" });
 
           ScrollTrigger.create({
             trigger: containerRef.current,

@@ -92,24 +92,24 @@ const Footer = () => {
             </button>
           </div>
         </form>
-        <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 sm:gap-8">
+        <div className="text-base sm:text-lg grid grid-cols-1 sm:grid-cols-4 gap-6 sm:gap-8">
           <div className="space-y-1 sm:space-y-2">
-            <h3 className="text-lg font-semibold text-foreground">Address</h3>
-            <p className="text-lg text-gray">
+            <h3 className="font-semibold text-foreground">Address</h3>
+            <p className="text-gray">
               Unit 4 Marbridge Houser Harolds Road, Harlow, United Kingdom
             </p>
           </div>
           <div className="space-y-1 sm:space-y-2">
             {" "}
-            <h3 className="text-lg font-semibold text-foreground">Email Us</h3>
-            <p className="text-lg text-gray">info@amlegacysports.com</p>
+            <h3 className="font-semibold text-foreground">Email Us</h3>
+            <p className="text-gray">info@amlegacysports.com</p>
           </div>
           <div className="space-y-1 sm:space-y-2">
             {" "}
-            <h3 className="text-lg font-semibold text-foreground">
+            <h3 className="font-semibold text-foreground">
               Talk To An Expert
             </h3>
-            <p className="text-lg text-gray">
+            <p className="text-base sm:text-gray">
               +44 7708 321 576
             </p>
           </div>
@@ -136,7 +136,7 @@ const Footer = () => {
         </div>
       </footer>
       <section className="overflow-hidden bg-accent px-con py-4">
-        <div className="max-w-con max-sm:flex-col max-sm:text-center flex-wrap text-gray text-base flex justify-between items-center gap-1">
+        <div className="max-w-con max-sm:flex-col max-sm:text-center flex-wrap text-gray text-sm sm:text-base flex justify-between items-center gap-1">
           <p>All copyrights reserved © AM LEGACY SPORTS</p>
           <p>Made By: Sheharyar Saeed</p>
         </div>

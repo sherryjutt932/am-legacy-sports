@@ -13,10 +13,10 @@ const TextAnimate = dynamic(
 );
 
 const team = [
-  { name: "Ateeq Mahmoud", role: "Founder and CEO | FIFA License Agent", img: "/avatar.png" },
-  { name: "Nadia Mohammed", role: "Digital Manager", img: "/avatarG.png" },
-  { name: "Abdul Fataw Mikail", role: "Scout", img: "/avatar.png" },
-  { name: "Rose Okyere", role: "Marketing", img: "/avatarG.png" },
+  { name: "Ateeq Mahmoud", role: "Founder and CEO | FIFA License Agent", img: "/Ateeq Mahmoud.jpeg" },
+  { name: "Nadia Mohammed", role: "Digital Manager", img: "/Nadia Mohammed.jpeg" },
+  { name: "Abdul Fataw Mikail", role: "Scout", img: "/user2.png" },
+  { name: "Rose Okyere", role: "Marketing", img: "/user2.png" },
 ];
 
 const textVariants = {
@@ -60,9 +60,9 @@ const Team = () => {
                 variants={imageVariant}
                 src={member.img}
                 alt={member.name}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full block outline-none border-none"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-background via-background/60 via-30% to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-background/90 via-background/20 via-30% to-transparent" />
             </div>
 
             {/* Info */}

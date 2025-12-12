@@ -11,14 +11,14 @@ const feedbacks = [
   {
     name: "Abdul Basit Sualla",
     title: "Puebla CP - Spanish Tercera division",
-    img: "/avatar.png",
+    img: "/user2.png",
     text: "I was skeptical about switching agents, but AM Legacy Sports exceeded all my expectations. Their industry knowledge and network opened up incredible opportunities for me.",
     rating: 5,
   },
   {
     name: "Daniel Ruiz",
     title: "Real Betis Academy Player",
-    img: "/avatarG.png",
+    img: "/user2.png",
     text: "The support I received from AM Legacy Sports was outstanding. They believed in my potential and guided me every step of the way. Truly a life-changing experience.",
     rating: 4,
   },
