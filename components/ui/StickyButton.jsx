@@ -20,13 +20,13 @@ const StickyButton = ({ text, multiArrow, theme = "trans", parentClass }) => {
   const parentClasses = {
     light: "bg-primary border border-background/50 text-background",
     dark: "bg-white border border-[#CFCFCF] text-white",
-    trans: "bg-white/20 border border-[#CFCFCF] text-white",
+    trans: "bg-black/20 border border-[#d9d9d9]/10 text-white",
   };
 
   const arrowClasses = {
     light: "bg-foreground text-background",
     dark: "bg-primary text-white",
-    trans: "bg-foreground text-white",
+    trans: "bg-foreground/10 text-white",
   };
 
   const textClasses = {

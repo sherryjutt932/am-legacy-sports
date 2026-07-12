@@ -25,14 +25,14 @@ const HeroSec = () => {
       <div className="grow flex flex-col gap-6 items-center justify-center">
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-medium text-center text-foreground drop-shadow-2xl leading-tight">
           <TextAnimate animation="blurInUp" by="character" once>
-            About Us
+            Track Record
           </TextAnimate>
         </h1>
       </div>
 
       <BlurFade delay={0.3} className="w-full flex max-sm:flex-col max-sm:items-center sm:justify-between gap-4">
         <p className="text-base sm:text-lg md:text-xl text-gray mt-4 max-w-[min(45ch,95%)] max-sm:text-center">
-          AM Legacy Sports Consult Ltd is a specialist football investment and advisory firm focused on connecting capital with high-potential opportunities across global football markets.
+          We present curated football investment opportunities across European markets.
         </p>
         <div className="flex items-center gap-3">
           <Link href={"#contact"}>

@@ -8,10 +8,12 @@ import dynamic from "next/dynamic";
 
 // Only lazy-load heavy or interactive sections
 const WhatWeDo = dynamic(() => import("./_components/WhatWeDo"), { ssr: true });
-const Stats = dynamic(() => import("./_components/Stats"), { ssr: true });
+const WhyFootball = dynamic(() => import("./_components/WhyFootball"), { ssr: true });
+const DealCardLanding = dynamic(() => import("./_components/DealCardLanding"), { ssr: true });
 const Team = dynamic(() => import("./_components/Team"), { ssr: true });
-const Partners = dynamic(() => import("./_components/Partners"), { ssr: true });
+const PartnerWithUs = dynamic(() => import("./_components/PartnerWithUs"), { ssr: true });
 const Feedback = dynamic(() => import("./_components/Feedback"), { ssr: true });
+const Sponsors = dynamic(() => import("./_components/Sponsors"), { ssr: true });
 
 export default function Home() {
   useEffect(() => {
@@ -35,12 +37,14 @@ export default function Home() {
     <>
       <Loader />
       <Hero />
+      <Sponsors />
+      <WhatWeDo />
+      <WhyFootball />
+      <DealCardLanding />
       <OurServices />
-       <WhatWeDo />
-      <Stats />
       <Team />
-      <Partners />
-      <Feedback /> 
+      <PartnerWithUs />
+      <Feedback />
     </>
   );
 }

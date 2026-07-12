@@ -54,7 +54,7 @@ const Team = () => {
             {/* Apple-style animated border glow */}
 
             {/* Image */}
-            <div className="relative w-full h-[15rem] sm:h-[22rem] overflow-hidden rounded-[calc(1rem+1px)]">
+            <div className="relative w-full h-60 sm:h-88 overflow-hidden rounded-[calc(1rem+1px)]">
               <motion.img
                 transition={{ type: "spring", stiffness: 100, damping: 15 }}
                 variants={imageVariant}
@@ -62,7 +62,7 @@ const Team = () => {
                 alt={member.name}
                 className="object-cover w-full h-full block outline-none border-none"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-background/90 via-background/20 via-30% to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-tr from-background via-background/80 via-[3rem] to-transparent" />
             </div>
 
             {/* Info */}

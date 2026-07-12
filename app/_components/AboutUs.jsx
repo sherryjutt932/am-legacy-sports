@@ -44,7 +44,7 @@ const AboutUs = () => {
               alt={"africa"}
               width={400}
               height={400}
-              className="max-sm:h-[5rem] w-[24vw] sm:w-[14rem] rounded-lg object-contain"
+              className="max-sm:h-20 w-[24vw] sm:w-56 rounded-lg object-contain"
             />
             <h3 className="text-2xl sm:text-[2.5rem] md:text-[3rem] font-medium leading-normal text-foreground">
               Africa
@@ -80,7 +80,7 @@ const AboutUs = () => {
         <div className="flex-1 p-6 flex flex-col justify-start items-center text-center gap-6">
           <div className="flex gap-4">
             <Image
-              src={"/avatar.png"}
+              src={"/Ateeq Mahmoud.jpeg"}
               alt={"fifa"}
               width={400}
               height={400}
@@ -125,7 +125,7 @@ const AboutUs = () => {
           </div>
           <p className="*:text-white *:font-semibold text-base sm:text-lg md:text-xl text-gray max-w-[90%]">
             We work with some of the most respected academies and clubs,
-            including <b>Steadfast FC</b> and <b>FDM Fieldmasters SC</b>, known
+            including Steadfast FC and FDM Fieldmasters SC, known
             for producing talents like Abdul Fatawu Issahaku and Nathaniel
             Opoku.
           </p>

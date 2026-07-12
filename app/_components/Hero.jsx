@@ -39,7 +39,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0 overflow-hidden -z-10">
           <motion.img
-            src="/Hero.webp"
+            src="/Hero2.webp"
             alt="AM Legacy Hero"
             loading="eager"
             className="w-full h-full object-cover"
@@ -61,7 +61,7 @@ export default function Hero() {
         transition={{ duration: 1.2, ease: "easeOut" }}
         className="px-6 sm:px-16 md:px-20 min-h-screen w-full flex flex-col justify-between items-center gap-12"
       >
-        <div className="h-20 sm:h-32" />
+        <div className="h-20 sm:h-34" />
 
         {loaded && (
           <>
@@ -72,19 +72,23 @@ export default function Hero() {
                 by="word"
                 once
               >
-                Empowering Football Talent and Strategic Investment Across Borders
+                Football Investment.
+                Structured. Strategic.
+                Global.
               </TextAnimate>
             </h1>
-            <h1 className="max-sm:hidden text-4xl sm:text-6xl md:text-7xl font-medium text-center text-foreground drop-shadow-2xl leading-tight">
+            <h1 className="max-sm:hidden text-4xl sm:text-6xl md:text-[5rem] font-medium text-center text-foreground drop-shadow-2xl leading-tight text-shadow-2xs text-shadow-black/30">
               <TextAnimate
                 duration={0.9}
                 animation="blurInUp"
                 by="character"
                 once
               >
-                Empowering Football Talent <br />
-                and Strategic Investment <br />
-                Across Borders
+                Football Investment.
+                <br />
+                Structured. Strategic.
+                <br />
+                Global.
               </TextAnimate>
             </h1>
           </>
@@ -94,17 +98,24 @@ export default function Hero() {
           <div className="flex flex-col w-full gap-16">
             <BlurFade className="w-full flex max-sm:flex-col gap-4 max-sm:items-center justify-center sm:justify-between" delay={0.3}>
               <p className="max-sm:text-center text-base sm:text-lg md:text-xl text-gray mt-4 max-w-[min(45ch,95%)]">
-                We connect elite African talent with global football
-                opportunities while advising investors and clubs on sustainable
-                sporting partnerships.
+                We advise investors, funds, and football stakeholders on acquiring, managing, and growing football assets across Europe, with a focus on Scandinavia and emerging talent markets.
               </p>
-              <Link href={"#contact"}>
-                <StickyButton
-                  parentClass={"text-dark"}
-                  text={"reach out to book"}
-                  theme="light"
-                />
-              </Link>
+              <div className="flex items-center gap-3">
+                <Link href={"#contact"}>
+                  <StickyButton
+                    parentClass={"text-dark"}
+                    text={"Explore Opportunities"}
+                    theme="trans"
+                  />
+                </Link>
+                <Link href={"#contact"}>
+                  <StickyButton
+                    parentClass={"text-dark"}
+                    text={"Book a Consultation"}
+                    theme="light"
+                  />
+                </Link>
+              </div>
             </BlurFade>
 
             <BlurFade

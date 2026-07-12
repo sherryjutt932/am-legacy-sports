@@ -20,12 +20,12 @@ const BlurFade = dynamic(
 const HeroSec = () => {
   return (
     <section className="min-h-[600px] sm:min-h-[700px] px-con w-full flex flex-col justify-between items-center gap-12">
-        <div className="h-20 sm:h-32" />
+      <div className="h-20 sm:h-32" />
 
       <div className="grow flex flex-col gap-6 items-center justify-center">
         <div className="sm:mx-20 text-xl sm:text-2xl flex max-sm:flex-col max-sm:text-center sm:items-center sm:justify-center gap-3 pr-[2ch]">
-          <span>Football</span>
-          <Spacer  width="10rem" className={"max-sm:hidden"} />
+          <span>Explore</span>
+          <Spacer width="10rem" className={"max-sm:hidden"} />
           <Spacer fullWidth className={"sm:hidden"} />
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-medium text-center text-foreground drop-shadow-2xl leading-tight">
             <div className="opacity-0 px-1">Investment</div>
@@ -37,25 +37,30 @@ const HeroSec = () => {
           </h1>
           <Spacer width="10rem" className={"max-sm:hidden"} />
           <Spacer fullWidth className={"sm:hidden"} />
-          <span>Advisory</span>
+          <span>Opportunities</span>
         </div>
       </div>
 
       <BlurFade delay={0.3} className="w-full flex max-sm:flex-col max-sm:items-center sm:justify-between gap-4">
         <p className="text-base sm:text-lg md:text-xl text-gray mt-4 max-w-[min(45ch,95%)] max-sm:text-center">
-          Connecting Capital With the Future of Football.
-          <br className="max-sm:hidden" />
-          As football evolves into a global investment ecosystem, AM Legacy
-          Sports serves as the trusted link between investors, clubs, and
-          sporting opportunities.
+          We present curated football investment opportunities across European markets.
         </p>
-        <Link href={"#contact"}>
-          <StickyButton
-            parentClass={"text-dark"}
-            text={"reach out to book"}
-            theme="light"
-          />
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link href={"#contact"}>
+            <StickyButton
+              parentClass={"text-dark"}
+              text={"Explore Opportunities"}
+              theme="trans"
+            />
+          </Link>
+          <Link href={"#contact"}>
+            <StickyButton
+              parentClass={"text-dark"}
+              text={"Book a Consultation"}
+              theme="light"
+            />
+          </Link>
+        </div>
       </BlurFade>
 
       <Spacer fullWidth delay={0.8} />

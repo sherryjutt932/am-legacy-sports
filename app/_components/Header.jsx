@@ -24,7 +24,9 @@ const NavItems = [
   { id: "home", label: "Home", src: "/" },
   { id: "about", label: "About", src: "/About" },
   { id: "investment", label: "Investment", src: "/Investment" },
+  { id: "track-record", label: "Track Record", src: "/TrackRecord" },
   { id: "services", label: "Services", src: "/Services" },
+  { id: "contact", label: "Contact", src: "/Contact" },
 ];
 
 // ---------------------- Component ----------------------

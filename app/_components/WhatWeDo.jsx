@@ -20,44 +20,23 @@ const list = [
   {
     id: "01",
     img: "/whatwedo/player-management.webp",
-    title: "Player Management",
+    title: "CLUB STRATEGY",
     description:
       "Comprehensive management services to support and develop player's careers.",
   },
   {
     id: "02",
     img: "/whatwedo/player-sales.webp",
-    title: "Player Sales",
+    title: "INVESTMENT ADVISORY",
     description:
-      "Facilitating the transfer and sale of players to clubs worldwide.",
+      "From player management to career defining opportunities, we connect athletes with success on and off the field.",
   },
   {
     id: "03",
     img: "/whatwedo/intermediatory-services.webp",
-    title: "Intermediary Services",
+    title: "TALENT & PLAYER TRADING",
     description:
       "Acting as an intermediary to connect players, clubs, and other stakeholders.",
-  },
-  {
-    id: "04",
-    img: "/whatwedo/contract-negotiation.webp",
-    title: "Contract Negotiation",
-    description:
-      "Expert negotiation to secure the best terms and conditions for player contracts.",
-  },
-  {
-    id: "05",
-    img: "/whatwedo/marketing-public-relations.webp",
-    title: "Marketing & Public Relations",
-    description:
-      "Promoting player's brands and managing public relations to enhance their marketability.",
-  },
-  {
-    id: "06",
-    img: "/whatwedo/consultation.webp",
-    title: "Consultation",
-    description:
-      "Providing professional advice and strategic planning for player's careers and personal development.",
   },
 ];
 
@@ -212,8 +191,8 @@ const WhatWeDo = () => {
             >
               <div
                 className={`rounded-full transition-all duration-300 ${activeIndex === i
-                    ? "bg-secondary h-2 w-6"
-                    : "bg-gray/40 group-hover:bg-gray group-hover:scale-125 h-2 w-2"
+                  ? "bg-secondary h-2 w-6"
+                  : "bg-gray/40 group-hover:bg-gray group-hover:scale-125 h-2 w-2"
                   }`}
               ></div>
             </div>

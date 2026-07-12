@@ -215,13 +215,16 @@ const Content = ({ List = [] }) => {
                             className="overflow-hidden"
                           >
                             <div className="min-h-fit grid grid-cols-2 gap-4 pt-4">
-                              {item.detail.map((item, index) => {
+                              {item.detail.map((detailItem, index) => {
                                 return (
                                   <div
                                     key={index}
-                                    className="text-base sm:text-lg text-gray-white overflow-hidden border rounded-lg p-4"
+                                    className="text-sm sm:text-base overflow-hidden border rounded-lg p-4 flex flex-col gap-1.5"
                                   >
-                                    {item}
+                                    <span className="text-foreground font-medium">• {typeof detailItem === 'string' ? detailItem : detailItem.title}</span>
+                                    {typeof detailItem !== 'string' && detailItem.description && (
+                                      <span className="text-gray text-sm leading-relaxed">{detailItem.description}</span>
+                                    )}
                                   </div>
                                 );
                               })}
@@ -249,7 +252,9 @@ const Content = ({ List = [] }) => {
                     {item.title}
                   </div>
                   <div className="text-base sm:text-xl text-gray leading-relaxed max-w-[40ch] mb-4 sm:mb-10">
-                    {item.detail}
+                    {item.description.map((desc, i) => (
+                      <span key={i} className="block">{desc}</span>
+                    ))}
                   </div>
                 </div>
 

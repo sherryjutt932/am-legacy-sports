@@ -4,88 +4,118 @@ import { TextAnimate } from "@/components/ui/text-animate";
 
 const sections = [
   {
-    title: "Career and Investment Advisory",
+    title: "Connecting Capital to Football Assets",
     icon: "/whatwedo/contract-negotiation.webp",
     image: "/service1.jpeg",
     description: [
-      "We empower players and stakeholders to plan strategically for life beyond the pitch. From establishing foundations to exploring investment opportunities, our advisory services ensure every decision contributes to lasting value.",
-      "We work closely with clients to develop business structures, investment portfolios, and governance frameworks that reflect professionalism and purpose.",
+      "We advise investors on acquiring, investing in, and partnering with football clubs across Europe, with a strong focus on Scandinavia.",
     ],
     detail: [
-      "Investment and financial planning",
-      "UK & EU company setup and compliance",
-      "Governance and foundation development",
-      "Career transition and retirement planning",
+      {
+        title: "Club acquisition & minority stake advisory",
+        description: "Offering strategic advice on career progression, including training, development, and transitions between teams or leagues.",
+      },
+      {
+        title: "Deal structuring & valuation",
+        description: "Assisting with the negotiation, interpretation, and management of contracts to ensure favorable terms and compliance with regulations.",
+      },
+      {
+        title: "Due diligence & risk analysis",
+        description: "Providing insights based on performance data to help athletes improve their skills and strategies.",
+      },
+      {
+        title: "Investor representation in negotiations",
+        description: "Advising on financial management, including budgeting, investments, tax planning, and retirement planning.",
+      },
     ],
-    cta: "Plan your legacy with confidence",
+    cta: "Explore investment opportunities",
   },
   {
-    title: "Player Representation & Transfers",
+    title: "Building Sustainable Football Businesses",
     icon: "/whatwedo/player-management.webp",
     image: "/service4.jpeg",
     description: [
-      "At AM Legacy Sports, we represent professional and emerging footballers with transparency and strategy. Our role goes far beyond contract negotiation- we guide players through every stage of their careers, ensuring every move aligns with their sporting ambition and personal growth",
-      "We manage the full transfer process, leveraging our strong relationships across Europe, Africa, and the Middle East to secure the right opportunities and protect our client's interests.",
+      "We support clubs post-investment with strategic planning, financial discipline, and sporting alignment.",
     ],
     detail: [
-      "Contract negotiation and legal support",
-      "Transfer market and career planning",
-      "Image rights and personal brand management",
-      "Post-transfer relocation and adaptation support",
+      {
+        title: "Financial planning & cost optimization",
+        description: "Identifying and attracting talented players.",
+      },
+      {
+        title: "Governance and board advisory",
+        description: "Providing training programs to enhance skills and performance.",
+      },
+      {
+        title: "Sporting structure alignment",
+        description: "Tracking player performance through statistics and metrics.",
+      },
+      {
+        title: "Revenue growth strategies",
+        description: "Tracking player performance through statistics and metrics.",
+      },
     ],
-    cta: "Start your professional journey with us",
+    cta: "Build a sustainable club model",
   },
   {
-    title: "Scouting & Strategic Recruitment",
+    title: "Creating Value Through Talent",
     icon: "/whatwedo/consultation.webp",
     image: "/service2.jpeg",
     description: [
-      "We combine advanced analytics, global networks, and on-ground scouting to help clubs identify, evaluate, and recruit exceptional talent. Our recruitment framework ensures clubs invest in players who not only fit the system but also hold long-term value.",
-      "From youth prospects to first-team ready talent, we work with clubs and academies to design sustainable recruitment pipelines.",
+      "We design and manage structured player pipelines between Africa and Europe, enabling clubs to generate sustainable transfer revenue.",
     ],
     detail: [
-      "Talent identification and scouting coordination",
-      "Data-based player performance analysis",
-      "Succession and squad-planning strategies",
-      "Recruitment consulting for European and African markets",
+      {
+        title: "Talent pipeline development (Ghana → Europe)",
+        description: "",
+      },
+      {
+        title: "Player trading strategy",
+        description: "Managing the transfer process when a player moves between clubs, ensuring all legal and financial aspects are handled smoothly.",
+      },
+      {
+        title: "Recruitment model design",
+        description: "Securing sponsorship and endorsement opportunities for players to enhance their income and public profile.",
+      },
+      {
+        title: "Club-to-club partnerships",
+        description: "Securing sponsorship and endorsement opportunities for players to enhance their income and public profile.",
+      },
     ],
-    cta: "Enhance your recruitment strategy today",
+    cta: "Unlock talent-driven growth",
   },
   {
-    title: "Brand & Sponsorship Management",
+    title: "Unlocking Revenue Beyond the Pitch",
     icon: "/whatwedo/marketing-public-relations.webp",
     image: "/service3.jpeg",
     description: [
-      "We believe that off-the-pitch presence matters as much as on-field performance. Our branding team works with players and coaches to define their image, tell their story, and connect with sponsors who share their values",
-      "Whether it's kit deals, ambassador roles, or CSR initiatives, we negotiate partnerships that elevate both profile and purpose.",
+      "We connect clubs with commercial partners and sponsors, particularly linking African brands to European exposure.",
     ],
     detail: [
-      "Sponsorship and endorsement negotiations",
-      "Personal brand and social media development",
-      "Corporate and ambassadorial partnerships",
-      "CSR and community campaign planning",
+      {
+        title: "Sponsorship acquisition",
+        description: "Assessing the market value of a player based on performance, potential, and market conditions.",
+      },
+      {
+        title: "Brand partnerships",
+        description: "Assisting with the negotiation, interpretation, and management of contracts to ensure favorable terms and compliance with regulations.",
+      },
+      {
+        title: "Market entry strategy (Africa 🇪🇺 Europe)",
+        description: "Engaging in discussions with potential buyers to agree on transfer fees, contract terms, and conditions.",
+      },
+      {
+        title: "Commercial deal structuring",
+        description: "Engaging in discussions with potential buyers to agree on transfer fees, contract terms, and conditions.",
+      },
     ],
-    cta: "Grow your brand with our expertise",
+    cta: "Grow your commercial network",
   },
 ];
 
 const ServiceDetail = () => {
   return (
     <div className="flex flex-col items-center gap-12 sm:gap-24 py-14 sm:py-24">
-      {/* header */}
-      <div className="px-con w-full flex flex-col items-center gap-1">
-        <h2 className="text-3xl sm:text-[3rem] font-medium leading-normal text-foreground">
-          <TextAnimate animation="blurInUp" once by="character">
-            What We Provide
-          </TextAnimate>
-        </h2>
-        <p className="text-base sm:text-lg md:text-xl text-gray mt-2 sm:mt-4 max-w-[95%] sm:max-w-[65ch] text-center">
-          We connect elite African talent with global football opportunities
-          while advising investors and clubs on sustainable sporting
-          partnerships.
-        </p>
-      </div>
-
       {/* content */}
       <Content List={sections} />
 
